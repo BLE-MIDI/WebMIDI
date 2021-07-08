@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <!-- Invisible things... -->
+  <meta charset="UTF-8">
+  <title>BLE-MIDI Receiver</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab&display=swap" rel="stylesheet">
+<head>
+  <!-- Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="midistyle.css">
+</head>
+<body>
+  <div class="window">
+    <!-- Main Content-->
+    <h1>BLE MIDI Rx</h1>
+    <div class="briefer">
+      <p id="info" class="info">This webpage can connect to a BLE-MIDI device, and displays received MIDI messages in console below.</p>
+      <p id="hide" class="sidenote">Some older devices and browsers do not support neither MIDI nor Bluetooth.</p>
+    </div>
+
+    <!-- Console -->
+    <div class="console" id="iConsole">
+      <section id="midi-data">  
+          <ul></ul>
+      </section>
+    </div>
+
+    <!-- Button -->
+    <div class="dynamicbtn" id="iconnect">
+        <button id="ibutton" class="connectbtn" onclick="rxConnect()">Connect</button>
+      </div>
+  </div>
+
+  <!-- Javascript files-->
+  <script src='https://g200kg.github.io/webaudio-tinysynth/webaudio-tinysynth.js'></script>
+  <script src="./common.js"></script>
+  <script src="./midiBLEdecoder.js"></script>
+  <script src="./blerx.js"></script>
+  <script src="./midiContentDecoder.js"></script>
+  
+  
+</body>
+</html>

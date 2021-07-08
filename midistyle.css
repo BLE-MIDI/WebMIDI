@@ -1,0 +1,125 @@
+/** Background colour */
+html {
+  height:                 100%;
+  background:             linear-gradient(to bottom, 
+                        #00A9CE 0%, 
+                        #0033A0 100%);
+  background-repeat:      no-repeat;
+}
+
+body {
+  padding:                3em 2em;
+  font-family:            'Roboto Slab', serif;
+}
+.window {
+  padding:                1em;
+  background:           #CFD8DC;
+  border:                 2px solid #263238;
+  border-radius:          5px;
+  box-shadow:             0 14px 28px rgba(0,0,0,0.25),
+                          0 10px 10px rgba(0,0,0,0.22);
+}
+#hide1, #hide2 {
+  display:                block;
+}
+
+/** Text and boxes inside main window */
+h1, h2, p, ul {
+  color:                #37474F;
+}
+h1 {
+  margin:                 0em;
+  font-family:            'Roboto Slab', serif;
+  text-align:             center;
+  font-size:              4em;
+}
+h2 {
+  text-align:             center;
+  font-size:              2em;
+}
+p.info {
+  font-size:              2em;
+  margin-left:            0.5em;
+  margin-right:           0.5em;
+  margin-top:             0em;
+}
+p.sidenote {
+  font-size:              10px;
+  margin-left:            0.5em;
+  margin-right:           0.5em;
+  margin-top:             0.5em;
+}
+
+/* Global button style */
+.connectbtn, .rxbutton, .txbutton {
+  color:                white;
+  font-size:              4em;
+  cursor:                 pointer;
+  padding:                0.3em 0.3em;
+  font-family:            'Roboto Slab', serif;
+  border:                 1px solid #263238;
+  border-radius:          3px;
+}
+.connectbtn {
+  display:                block;
+  background-color:     #3F51B5;
+  width:                  75%;
+  margin:                 0.5em auto;
+}
+
+/** For test and debug sites */
+.rxbutton {
+  margin-top:             1em;
+  float:                  left;
+  background-color:     #3F51B5;
+}
+.txbutton {
+  margin-top:             1em;
+  float:                  right;
+  background-color:     #FF9800;
+}
+.ckeys {
+  width:                  50%;
+  display:                block;
+  margin:                 auto auto;
+}
+
+/** Console behaviour */
+#midi-data {
+  position:             relative;
+  overflow:             hidden;
+  height:               10vh;
+  background:         #ECEFF1;
+  border:               7px solid #546E7A;
+}
+#midi-data ul {
+  position:             absolute;
+  left:                 0px;
+  bottom:               0px;
+  padding:              0.5m;
+}
+#midi-data ul li {
+  padding:              0.2em 0.2em 0.2em 1em;
+  font-size:            1.6em;
+  font-family:          monospace;
+  list-style-type:      none;
+}
+#midi-data ul li:last-child {
+  font-weight:          bold;
+  color:              #3F51B5;
+  animation:            flash 0.5s;
+  font-size:            1.6em;
+}
+#midi-data ul li:last-child:before {
+  content:              "> ";
+  margin-left:          -1em;
+}
+/** Animation - Flash*/
+@keyframes flash {
+  0% {
+    color:            #FFC107;
+  }
+  100% {
+    color:            #3F51B5;
+  }
+}
